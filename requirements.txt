@@ -1,0 +1,7 @@
+numpy
+pandas
+matplotlib
+requests
+pytest
+boto3
+openai
