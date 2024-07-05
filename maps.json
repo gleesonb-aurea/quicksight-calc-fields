@@ -1,0 +1,213 @@
+{
+    "Status": 200,
+    "DataSet": {
+        "Arn": "arn:aws:quicksight:us-east-1:648953653967:dataset/0e071154-20f6-4be2-96a2-7d8d0023c735",
+        "DataSetId": "0e071154-20f6-4be2-96a2-7d8d0023c735",
+        "Name": "insight",
+        "CreatedTime": "2024-06-04T09:59:13.633000+00:00",
+        "LastUpdatedTime": "2024-07-05T10:01:15.946000+00:00",
+        "PhysicalTableMap": {
+            "9c060c96-8c15-4741-bb9e-b5ca7daa92d4": {
+                "S3Source": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:648953653967:datasource/e71b06e7-2916-404e-b790-423392a39120",
+                    "UploadSettings": {
+                        "Format": "CSV",
+                        "StartFromRow": 1,
+                        "ContainsHeader": true,
+                        "TextQualifier": "DOUBLE_QUOTE",
+                        "Delimiter": ","
+                    },
+                    "InputColumns": [
+                        {
+                            "Name": "BU",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "account",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "region",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Resource",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Finder",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Annual Cost",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Annual Savings",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "created_at",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "updated_at",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "category",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Onboarded",
+                            "Type": "STRING"
+                        }
+                    ]
+                }
+            }
+        },
+        "LogicalTableMap": {
+            "4944fb94-9d67-4903-9ef4-21882112a808": {
+                "Alias": "insight",
+                "DataTransforms": [
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "account",
+                            "NewColumnType": "INTEGER"
+                        }
+                    },
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "Annual Cost",
+                            "NewColumnType": "DECIMAL",
+                            "SubType": "FLOAT"
+                        }
+                    },
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "Annual Savings",
+                            "NewColumnType": "DECIMAL",
+                            "SubType": "FLOAT"
+                        }
+                    },
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "created_at",
+                            "NewColumnType": "DATETIME",
+                            "Format": "yyyy-MM-dd HH:mm:ss"
+                        }
+                    },
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "updated_at",
+                            "NewColumnType": "DATETIME",
+                            "Format": "yyyy-MM-dd HH:mm:ss"
+                        }
+                    },
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "Onboarded",
+                            "NewColumnType": "DATETIME",
+                            "Format": "yyyy-MM-dd HH:mm:ss"
+                        }
+                    },
+                    {
+                        "TagColumnOperation": {
+                            "ColumnName": "region",
+                            "Tags": [
+                                {
+                                    "ColumnGeographicRole": "STATE"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "ProjectOperation": {
+                            "ProjectedColumns": [
+                                "BU",
+                                "account",
+                                "region",
+                                "Resource",
+                                "Finder",
+                                "Annual Cost",
+                                "Annual Savings",
+                                "created_at",
+                                "updated_at",
+                                "status",
+                                "category",
+                                "Onboarded"
+                            ]
+                        }
+                    }
+                ],
+                "Source": {
+                    "PhysicalTableId": "9c060c96-8c15-4741-bb9e-b5ca7daa92d4"
+                }
+            }
+        },
+        "OutputColumns": [
+            {
+                "Name": "BU",
+                "Type": "STRING"
+            },
+            {
+                "Name": "account",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "region",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Resource",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Finder",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Annual Cost",
+                "Type": "DECIMAL",
+                "SubType": "FLOAT"
+            },
+            {
+                "Name": "Annual Savings",
+                "Type": "DECIMAL",
+                "SubType": "FLOAT"
+            },
+            {
+                "Name": "created_at",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "updated_at",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "status",
+                "Type": "STRING"
+            },
+            {
+                "Name": "category",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Onboarded",
+                "Type": "DATETIME"
+            }
+        ],
+        "ImportMode": "SPICE",
+        "ConsumedSpiceCapacityInBytes": 2402041,
+        "FieldFolders": {},
+        "DataSetUsageConfiguration": {
+            "DisableUseAsDirectQuerySource": false,
+            "DisableUseAsImportedSource": false
+        }
+    },
+    "RequestId": "be1d5a1f-dc10-41e1-8167-5faa8ef3c823"
+}

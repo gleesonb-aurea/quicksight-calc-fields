@@ -1,0 +1,64 @@
+"PhysicalTableMap": {
+            "9c060c96-8c15-4741-bb9e-b5ca7daa92d4": {
+                "S3Source": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:648953653967:datasource/e71b06e7-2916-404e-b790-423392a39120",
+                    "UploadSettings": {
+                        "Format": "CSV",
+                        "StartFromRow": 1,
+                        "ContainsHeader": true,
+                        "TextQualifier": "DOUBLE_QUOTE",
+                        "Delimiter": ","
+                    },
+                    "InputColumns": [
+                        {
+                            "Name": "BU",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "account",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "region",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Resource",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Finder",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Annual Cost",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Annual Savings",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "created_at",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "updated_at",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "category",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "Onboarded",
+                            "Type": "STRING"
+                        }
+                    ]
+                }
+            }
+        }
